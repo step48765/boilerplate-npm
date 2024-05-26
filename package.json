@@ -1,7 +1,6 @@
 {
-  "author": "michael",
-  "name": "fcc-learn-npm-package-json",
-  "description": "This is the boilerplate code for the Managing Packages With npm Challenges. Instructions for working on these challenges start at https://www.freecodecamp.org/learn/back-end-development-and-apis/managing-packages-with-npm/",
+  "name": "fcc-learn-node-with-express",
+  "version": "0.1.0",
   "dependencies": {
     "body-parser": "^1.15.2",
     "cookie-parser": "^1.4.3",
@@ -12,15 +11,5 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
-  },
-  "engines": {
-    "node": "18.x"
-  },
-  "bugs": {
-    "url": "https://github.com/freeCodeCamp/boilerplate-npm/issues"
-  },
-  "homepage": "https://github.com/freeCodeCamp/boilerplate-npm#readme",
-  "version": "1.0.0",
-  "license": "ISC",
-  "keywords": ["learning", "backend", "freecodecamp"]
+  }
 }
