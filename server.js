@@ -18,9 +18,9 @@ if (!process.env.DISABLE_XORIGIN) {
 }
 
 // Add this route to serve index.html from the views directory
-app.get('/', (req, res) => {
+/* app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'index.html'));
-});
+}); */
 
 const port = process.env.PORT || 3000;
 bGround.setupBackgroundApp(app, myApp, __dirname).listen(port, () => {

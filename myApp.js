@@ -4,8 +4,8 @@ const app = express();
 
 console.log("Hello World");
 
-app.get('/', (req, res) => {
+app.get("/", (req, res) => {
     res.send("Hello Express");
-})
+  });
 
 module.exports = app;
