@@ -3,12 +3,12 @@
  * the verification process may break
  * ***************************************************/
 
-'use strict';
+//'use strict';
 
-var fs = require('fs');
+// var fs = require('fs');
 const bGround = require('fcc-express-bground');
-const myApp = require('./myApp');
 var express = require('express');
+const myApp = require('./myApp');
 var app = express();
 
 if (!process.env.DISABLE_XORIGIN) {
@@ -23,7 +23,7 @@ if (!process.env.DISABLE_XORIGIN) {
     next();
   });
 }
-
+/* 
 app.use('/public', express.static(process.cwd() + '/public'));
 
 app.route('/_api/package.json')
@@ -54,6 +54,8 @@ app.use(function(err, req, res, next) {
       .send(err.message || 'SERVER ERROR');
   }  
 })
+ */
+
 
 //Listen on port set in environment variable or default to 3000
 //const listener = app.listen(process.env.PORT || 3000, function () {
