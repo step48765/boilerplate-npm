@@ -6,6 +6,8 @@
 'use strict';
 
 var fs = require('fs');
+const bGround = require('fcc-express-bground');
+const myApp = require('./myApp');
 var express = require('express');
 var app = express();
 
@@ -47,14 +49,20 @@ app.use(function(req, res, next){
 // Error Middleware
 app.use(function(err, req, res, next) {
   if(err) {
-    res.status(err.status || 500)
+    res.status(err.status || 500)  
       .type('txt')
       .send(err.message || 'SERVER ERROR');
   }  
 })
 
 //Listen on port set in environment variable or default to 3000
-const listener = app.listen(process.env.PORT || 3000, function () {
-  console.log("Node.js listening on port " + listener.address().port);
+//const listener = app.listen(process.env.PORT || 3000, function () {
+//  console.log("Node.js listening on port " + listener.address().port);
+//});
+
+const port = process.env.PORT || 3000;
+bGround.setupBackgroundApp(app, myApp, __dirname).listen(port, () => {
+  bGround.log(`Node is listening on port ${port}...`);
 });
+
 
