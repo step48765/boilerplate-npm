@@ -19,6 +19,10 @@ app.get("/json", (req, res) => {
     }else{
         res.json({"message": "Hello json"});
     }
-    
+});
+
+
+app.use((req, res, next) =>{
+    console.log(req.method +  + req.path + " - " + req.ip);
 });
 module.exports = app;
